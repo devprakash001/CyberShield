@@ -39,7 +39,7 @@ export default function ContactPage() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 p-6 flex justify-between items-center backdrop-blur-sm bg-black/50 border-b border-cyan-500/20">
+      {/* <nav className="relative z-50 p-6 flex justify-between items-center backdrop-blur-sm bg-black/50 border-b border-cyan-500/20">
         <Link href="/" className="flex items-center space-x-2">
           <Shield className="w-8 h-8 text-cyan-400 animate-pulse" />
           <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -61,7 +61,7 @@ export default function ContactPage() {
         <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 border-0 glow-button">
           Get Started
         </Button>
-      </nav>
+      </nav> */}
 
       {/* Hero Section */}
       <section className="relative z-10 pt-32 pb-20 px-6">

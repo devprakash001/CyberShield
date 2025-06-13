@@ -1,10 +1,7 @@
 "use client"
-
-import React from "react"
-import Link from "next/link"
-import { Button } from "../components/ui/button"
-import { Card, CardContent } from "../components/ui/card"
-import { Badge } from "../components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import {
   Shield,
   Lock,
@@ -19,6 +16,8 @@ import {
   Clock,
 } from "lucide-react"
 import { useEffect, useState } from "react"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 
 export default function CybersecurityWebsite() {
   const [typedText, setTypedText] = useState("")
@@ -66,32 +65,10 @@ export default function CybersecurityWebsite() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-50 p-6 flex justify-between items-center backdrop-blur-sm bg-black/50 border-b border-cyan-500/20">
-        <Link href="/" className="flex items-center space-x-2">
-          <Shield className="w-8 h-8 text-cyan-400 animate-pulse" />
-          <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            CyberShield
-          </span>
-        </Link>
-        <div className="hidden md:flex space-x-8">
-          {["Services", "Solutions", "About", "Contact"].map((item) => (
-            <Link
-            key={item}
-            href={`/${item.toLowerCase()}`}
-            className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:glow-text relative group"
-          >
-            {item}
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
-          </Link>
-          ))}
-        </div>
-        <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 border-0 glow-button">
-          Get Started
-        </Button>
-      </nav>
+      {/* <Navbar /> */}
 
-      {/* Hero Section */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-6">
+      {/* Hero Section - Add pt-24 to account for fixed navbar */}
+      <section className="relative z-10 min-h-screen flex items-center justify-center px-6 pt-24">
         <div className="text-center max-w-6xl mx-auto">
           <Badge className="mb-6 bg-cyan-500/20 text-cyan-400 border-cyan-500/50 animate-bounce">
             🔒 Advanced Cybersecurity Solutions
@@ -137,6 +114,7 @@ export default function CybersecurityWebsite() {
         </div>
       </section>
 
+      {/* Rest of the sections remain unchanged */}
       {/* Stats Section */}
       <section className="relative z-10 py-20 px-6">
         <div className="max-w-6xl mx-auto">
@@ -305,19 +283,7 @@ export default function CybersecurityWebsite() {
       </section>
 
       {/* Footer */}
-      <footer className="relative z-10 border-t border-cyan-500/20 py-12 px-6 bg-black/50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Shield className="w-8 h-8 text-cyan-400" />
-              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                CyberShield
-              </span>
-            </div>
-            <div className="text-gray-400">© 2024 CyberShield. All rights reserved.</div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
