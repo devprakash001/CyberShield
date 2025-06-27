@@ -18,6 +18,7 @@ import {
 import { useEffect, useState } from "react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import Link from "next/link"
 
 export default function CybersecurityWebsite() {
   const [typedText, setTypedText] = useState("")
@@ -89,21 +90,14 @@ export default function CybersecurityWebsite() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/contact" className="group">
             <Button
               size="lg"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-lg px-8 py-4 glow-button group"
             >
-              Start Free Trial
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              Contact Us
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 text-lg px-8 py-4 group"
-            >
-              <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-              Watch Demo
-            </Button>
+            </Link>
           </div>
         </div>
 
@@ -254,34 +248,6 @@ export default function CybersecurityWebsite() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="relative z-10 py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Ready to Secure Your Business?
-          </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            Join thousands of companies that trust CyberShield to protect their digital assets
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-lg px-8 py-4 glow-button"
-            >
-              Start Free Trial
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 text-lg px-8 py-4"
-            >
-              Contact Sales
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <Footer />
     </div>

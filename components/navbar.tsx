@@ -172,9 +172,6 @@ export function Navbar() {
           <NavItem key={item.title} {...item} />
         ))}
       </div>
-      <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 border-0 glow-button">
-        Get Started
-      </Button>
     </motion.nav>
   )
 }

@@ -1,4 +1,4 @@
-// File: C:\Users\kanha\OneDrive\Desktop\CyberShield\app\page.tsx
+// File: G:\Cyber security\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
